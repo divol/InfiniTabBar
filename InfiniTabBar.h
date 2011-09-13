@@ -12,6 +12,8 @@
 	NSMutableArray *tabBars;
 	UITabBar *aTabBar;
 	UITabBar *bTabBar;
+    UIImageView *imageviewleft;
+    UIImageView *imageviewright;
 }
 
 @property (nonatomic, assign) id infiniTabBarDelegate;

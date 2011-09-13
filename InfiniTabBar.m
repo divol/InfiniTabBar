@@ -12,6 +12,72 @@
 @synthesize aTabBar;
 @synthesize bTabBar;
 
+
+-(UIImage*)makeTriangle:(CGRect)rect where:(int)where{
+    
+    CGSize size = CGSizeMake(rect.size.width, rect.size.height);
+	UIGraphicsBeginImageContext(size);
+    
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    
+    
+    switch(where){
+        case 0:
+            //nop
+            break;
+        case 1:
+            //bot
+            CGContextBeginPath(ctx);
+            CGContextMoveToPoint(ctx,0.0,0.0);
+            CGContextAddLineToPoint(ctx,size.width/2.0,size.height);
+            CGContextAddLineToPoint(ctx,size.width,0.0);
+            CGContextClosePath(ctx);
+            
+            break;
+        case 2:
+            //right
+            CGContextBeginPath(ctx);
+            CGContextMoveToPoint(ctx,0.0,size.height);
+            CGContextAddLineToPoint(ctx,size.width,size.height/2.0);
+            CGContextAddLineToPoint(ctx,0.0,0.0);
+            CGContextClosePath(ctx);
+
+            break;
+        case 4:
+            //up
+            CGContextBeginPath(ctx);
+            CGContextMoveToPoint(ctx,0.0,size.height);
+            CGContextAddLineToPoint(ctx,size.width/2.0,0.0);
+            CGContextAddLineToPoint(ctx,size.width,size.height);
+            CGContextClosePath(ctx);
+            break;
+        case 8:
+            //left
+            
+            CGContextBeginPath(ctx);
+            CGContextMoveToPoint(ctx,0.0,size.height/2.0);
+            CGContextAddLineToPoint(ctx,size.width,size.height);
+            CGContextAddLineToPoint(ctx,size.width,0.0);
+            CGContextClosePath(ctx);
+
+            break;
+            
+    }
+    
+    
+    
+    CGContextSetStrokeColorWithColor(ctx, [[UIColor darkGrayColor] CGColor]);
+    CGContextSetLineWidth(ctx, 2.0);
+    CGContextSetFillColor(ctx, CGColorGetComponents([[UIColor darkGrayColor] CGColor]));
+    CGContextStrokePath(ctx);
+    UIImage* result = UIGraphicsGetImageFromCurrentImageContext();
+	UIGraphicsEndImageContext();
+    
+    return result;
+
+    
+
+}
 - (id)initWithFrameAndItems:(CGRect)frame items:(NSArray *)items {
 	//self = [super initWithFrame:CGRectMake(0.0, 411.0, 320.0, 49.0)];
 	// TODO:
@@ -139,6 +205,49 @@
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
 	[infiniTabBarDelegate infiniTabBar:self didScrollToTabBarWithTag:scrollView.contentOffset.x / self.frame.size.width];
+    int position = [self currentTabBarTag];
+    
+   	UIScreen *screen = [UIScreen mainScreen];
+	CGRect sbounds = screen.applicationFrame;
+
+    if (imageviewleft){
+        [imageviewleft removeFromSuperview];
+        [imageviewleft release];
+        imageviewleft=NULL;
+    }
+    if (imageviewright){
+        [imageviewright removeFromSuperview];
+        [imageviewright release];
+        imageviewright=NULL;
+    }
+    if (self.tabBars !=0){
+        
+        int way = 0;
+        if (position > 0){
+            way = 8;
+        
+            UIImage * image = [self makeTriangle:CGRectMake(1, 1,9,48) where:way];
+            imageviewleft = [[UIImageView alloc]initWithImage: image];
+
+            imageviewleft.alpha = 1.0;  
+            imageviewleft.frame = CGRectMake(4, sbounds.size.height- 49.0,10,49);
+            //imageviewleft.bounds = CGRectMake(0, 0,25,49);
+            [self.superview addSubview:imageviewleft];
+       }
+       if (position < self.tabBars.count-1){
+            way = 2;
+            
+            UIImage * image = [self makeTriangle:CGRectMake(1, 1,9,48) where:way];
+            imageviewright = [[UIImageView alloc]initWithImage: image];
+            
+            imageviewright.alpha = 1.0;  
+           imageviewright.frame = CGRectMake(sbounds.size.width-14, sbounds.size.height- 49.0,10,49);
+           // imageviewright.bounds = CGRectMake(290, 0,25,49);
+            [self.superview addSubview:imageviewright];
+        }
+
+    }
+	NSLog(@"log %i",position);
 }
 
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
@@ -158,7 +267,12 @@
 	[bTabBar release];
 	[aTabBar release];
 	[tabBars release];
-	
+    if (imageviewleft)
+        [imageviewleft release];
+    if (imageviewright)
+        [imageviewright release];
+
+
 	[super dealloc];
 }
 
