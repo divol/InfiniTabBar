@@ -78,6 +78,64 @@
     
 
 }
+- (void)didMoveToSuperview{
+    [super didMoveToSuperview];
+    
+    [self arrowDecoration];
+}
+
+-(void)arrowDecoration{
+    
+    int position = [self currentTabBarTag];
+    UIScreen *screen = [UIScreen mainScreen];
+	CGRect sbounds = screen.applicationFrame;
+    
+    if (imageviewleft){
+        [imageviewleft removeFromSuperview];
+        [imageviewleft release];
+        imageviewleft=NULL;
+    }
+    if (imageviewright){
+        [imageviewright removeFromSuperview];
+        [imageviewright release];
+        imageviewright=NULL;
+    }
+    if (self.tabBars !=0){
+        
+        int way = 0;
+        if (position > 0){
+            way = 8;
+            
+            UIImage * image = [self makeTriangle:CGRectMake(1, 1,9,48) where:way];
+            imageviewleft = [[UIImageView alloc]initWithImage: image];
+            
+            imageviewleft.alpha = 0.0;  
+            imageviewleft.frame = CGRectMake(4, sbounds.size.height- 49.0,10,49);
+            //imageviewleft.bounds = CGRectMake(0, 0,25,49);
+            [self.superview addSubview:imageviewleft];
+            
+            [UIView animateWithDuration:0.3 animations:^{
+                imageviewleft.alpha = 1.0;
+            }];
+        }
+        if (position < self.tabBars.count-1){
+            way = 2;
+            
+            UIImage * image = [self makeTriangle:CGRectMake(1, 1,9,48) where:way];
+            imageviewright = [[UIImageView alloc]initWithImage: image];
+            
+            imageviewright.alpha = 0.0;  
+            imageviewright.frame = CGRectMake(sbounds.size.width-14, sbounds.size.height- 49.0,10,49);
+            // imageviewright.bounds = CGRectMake(290, 0,25,49);
+            [self.superview addSubview:imageviewright];
+            [UIView animateWithDuration:0.3 animations:^{
+                imageviewright.alpha = 1.0;
+            }];
+        }
+        
+    }
+
+}
 - (id)initWithFrameAndItems:(CGRect)frame items:(NSArray *)items {
 	//self = [super initWithFrame:CGRectMake(0.0, 411.0, 320.0, 49.0)];
 	// TODO:
@@ -118,8 +176,9 @@
 		}
 		
 		self.contentSize = CGSizeMake(x, 49.0);
+        
 	}
-	
+	 
     return self;
 }
 //320
@@ -205,49 +264,8 @@
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
 	[infiniTabBarDelegate infiniTabBar:self didScrollToTabBarWithTag:scrollView.contentOffset.x / self.frame.size.width];
-    int position = [self currentTabBarTag];
     
-   	UIScreen *screen = [UIScreen mainScreen];
-	CGRect sbounds = screen.applicationFrame;
-
-    if (imageviewleft){
-        [imageviewleft removeFromSuperview];
-        [imageviewleft release];
-        imageviewleft=NULL;
-    }
-    if (imageviewright){
-        [imageviewright removeFromSuperview];
-        [imageviewright release];
-        imageviewright=NULL;
-    }
-    if (self.tabBars !=0){
-        
-        int way = 0;
-        if (position > 0){
-            way = 8;
-        
-            UIImage * image = [self makeTriangle:CGRectMake(1, 1,9,48) where:way];
-            imageviewleft = [[UIImageView alloc]initWithImage: image];
-
-            imageviewleft.alpha = 1.0;  
-            imageviewleft.frame = CGRectMake(4, sbounds.size.height- 49.0,10,49);
-            //imageviewleft.bounds = CGRectMake(0, 0,25,49);
-            [self.superview addSubview:imageviewleft];
-       }
-       if (position < self.tabBars.count-1){
-            way = 2;
-            
-            UIImage * image = [self makeTriangle:CGRectMake(1, 1,9,48) where:way];
-            imageviewright = [[UIImageView alloc]initWithImage: image];
-            
-            imageviewright.alpha = 1.0;  
-           imageviewright.frame = CGRectMake(sbounds.size.width-14, sbounds.size.height- 49.0,10,49);
-           // imageviewright.bounds = CGRectMake(290, 0,25,49);
-            [self.superview addSubview:imageviewright];
-        }
-
-    }
-	NSLog(@"log %i",position);
+    [self arrowDecoration];
 }
 
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {

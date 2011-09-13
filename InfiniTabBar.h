@@ -21,6 +21,7 @@
 @property (nonatomic, retain) UITabBar *aTabBar;
 @property (nonatomic, retain) UITabBar *bTabBar;
 
+-(void)arrowDecoration;
 - (id)initWithFrameAndItems:(CGRect)frame items:(NSArray *)items;
 - (void)setBounces:(BOOL)bounces;
 // Don't set more items than initially

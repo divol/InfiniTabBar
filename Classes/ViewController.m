@@ -61,6 +61,7 @@
 	
 	[self.view addSubview:self.tabBar];
 	
+   
 	// UI
 	UILabel *aLabel = [[UILabel alloc] initWithFrame:CGRectMake(20.0, 23.0, 178.0, 21.0)];
 	aLabel.text = @"Bounces";
