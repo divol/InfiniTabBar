@@ -1,0 +1,80 @@
+// !$*UTF8*$!
+{
+	1D3623240D0F684500981E51 /* AppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {519, 245}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 374}";
+		};
+	};
+	1D3623250D0F684500981E51 /* AppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {782, 468}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 427}";
+		};
+	};
+	1D6058900D05DD3D006BFB54 /* InfiniTabBar */ = {
+		activeExec = 0;
+		executables = (
+			E1FDEB2C141FA1F5000CEB9C /* InfiniTabBar */,
+		);
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = E1FDEB2C141FA1F5000CEB9C /* InfiniTabBar */;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* InfiniTabBar */;
+		codeSenseManager = E1FDEB31141FA214000CEB9C /* Code sense */;
+		executables = (
+			E1FDEB2C141FA1F5000CEB9C /* InfiniTabBar */,
+		);
+		perUserDictionary = {
+			PBXPerProjectTemplateStateSaveDate = 337617397;
+			PBXWorkspaceStateSaveDate = 337617397;
+		};
+		sourceControlManager = E1FDEB30141FA214000CEB9C /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	E1FDEB2C141FA1F5000CEB9C /* InfiniTabBar */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = InfiniTabBar;
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	E1FDEB30141FA214000CEB9C /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	E1FDEB31141FA214000CEB9C /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+}

@@ -30,17 +30,17 @@
 	UITabBarItem *mostViewed = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemMostViewed tag:10];
 	
 	// Tab bar
-	self.tabBar = [[InfiniTabBar alloc] initWithItems:[NSArray arrayWithObjects:favorites,
-													   topRated,
-													   featured,
-													   recents,
-													   contacts,
-													   history,
-													   bookmarks,
-													   search,
-													   downloads,
-													   mostRecent,
-													   mostViewed, nil]];
+	self.tabBar = [[InfiniTabBar alloc] initWithFrameAndItems:self.view.frame items:[NSArray arrayWithObjects:favorites,
+																					 topRated,
+																					 featured,
+																					 recents,
+																					 contacts,
+																					 history,
+																					 bookmarks,
+																					 search,
+																					 downloads,
+																					 mostRecent,
+																					 mostViewed, nil]];
 	
 	[favorites release];
 	[topRated release];
@@ -90,40 +90,10 @@
 	
 	[bSwitch release];
 	
-	UIButton *aButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-	[aButton addTarget:self action:@selector(setNewItems) forControlEvents:UIControlEventTouchUpInside];
-	aButton.frame = CGRectMake(20.0, 90.0, 280.0, 37.0);
-	[aButton setTitle:@"Set new items" forState:UIControlStateNormal];
 	
-	[self.view addSubview:aButton];
 	
-	UIButton *bButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-	[bButton addTarget:self action:@selector(setOldItemsAnimated) forControlEvents:UIControlEventTouchUpInside];
-	bButton.frame = CGRectMake(20.0, 135.0, 280.0, 37.0);
-	[bButton setTitle:@"Set old items animated" forState:UIControlStateNormal];
 	
-	[self.view addSubview:bButton];
 	
-	UIButton *cButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-	[cButton addTarget:self action:@selector(scrollToTabBar3) forControlEvents:UIControlEventTouchUpInside];
-	cButton.frame = CGRectMake(20.0, 180.0, 280.0, 37.0);
-	[cButton setTitle:@"Scroll to tab bar 3" forState:UIControlStateNormal];
-	
-	[self.view addSubview:cButton];
-	
-	UIButton *dButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-	[dButton addTarget:self action:@selector(scrollAnimatedToTabBar1) forControlEvents:UIControlEventTouchUpInside];
-	dButton.frame = CGRectMake(20.0, 225.0, 280.0, 37.0);
-	[dButton setTitle:@"Scroll animated to tab bar 1" forState:UIControlStateNormal];
-	
-	[self.view addSubview:dButton];
-	
-	UIButton *eButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-	[eButton addTarget:self action:@selector(selectItem8) forControlEvents:UIControlEventTouchUpInside];
-	eButton.frame = CGRectMake(20.0, 270.0, 280.0, 37.0);
-	[eButton setTitle:@"Select item 8" forState:UIControlStateNormal];
-	
-	[self.view addSubview:eButton];
 	
 	UILabel *cLabel = [[UILabel alloc] initWithFrame:CGRectMake(20.0, 315.0, 230.0, 21.0)];
 	cLabel.text = @"Current tab bar:";

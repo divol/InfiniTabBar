@@ -12,13 +12,17 @@
 @synthesize aTabBar;
 @synthesize bTabBar;
 
-- (id)initWithItems:(NSArray *)items {
-	self = [super initWithFrame:CGRectMake(0.0, 411.0, 320.0, 49.0)];
+- (id)initWithFrameAndItems:(CGRect)frame items:(NSArray *)items {
+	//self = [super initWithFrame:CGRectMake(0.0, 411.0, 320.0, 49.0)];
 	// TODO:
-	//self = [super initWithFrame:CGRectMake(self.superview.frame.origin.x + self.superview.frame.size.width - 320.0, self.superview.frame.origin.y + self.superview.frame.size.height - 49.0, 320.0, 49.0)];
+	
+	UIScreen *screen = [UIScreen mainScreen];
+	CGRect sbounds = screen.applicationFrame;
+	self = [super initWithFrame:CGRectMake(0, sbounds.size.height - 49.0, sbounds.size.width, 49.0)];
 	// Doesn't work. self is nil at this point.
 	
     if (self) {
+		self.indicatorStyle=UIScrollViewIndicatorStyleWhite;
 		self.pagingEnabled = YES;
 		self.delegate = self;
 		
@@ -27,7 +31,7 @@
 		float x = 0.0;
 		
 		for (double d = 0; d < ceil(items.count / 5.0); d ++) {
-			UITabBar *tabBar = [[UITabBar alloc] initWithFrame:CGRectMake(x, 0.0, 320.0, 49.0)];
+			UITabBar *tabBar = [[UITabBar alloc] initWithFrame:CGRectMake(x, 0.0, sbounds.size.width, 49.0)];
 			tabBar.delegate = self;
 			
 			int len = 0;
@@ -44,7 +48,7 @@
 			
 			[tabBar release];
 			
-			x += 320.0;
+			x += self.frame.size.width;
 		}
 		
 		self.contentSize = CGSizeMake(x, 49.0);
@@ -52,19 +56,19 @@
 	
     return self;
 }
-
+//320
 - (void)setBounces:(BOOL)bounces {
 	if (bounces) {
 		int count = self.tabBars.count;
 		
 		if (count > 0) {
 			if (self.aTabBar == nil)
-				self.aTabBar = [[[UITabBar alloc] initWithFrame:CGRectMake(-320.0, 0.0, 320.0, 49.0)]autorelease];
+				self.aTabBar = [[[UITabBar alloc] initWithFrame:CGRectMake(-1*self.frame.size.width, 0.0, self.frame.size.width, 49.0)]autorelease];
 			
 			[self addSubview:self.aTabBar];
 			
 			if (self.bTabBar == nil)
-				self.bTabBar = [[[UITabBar alloc] initWithFrame:CGRectMake(count * 320.0, 0.0, 320.0, 49.0)] autorelease];
+				self.bTabBar = [[[UITabBar alloc] initWithFrame:CGRectMake(count * self.frame.size.width, 0.0, self.frame.size.width, 49.0)] autorelease];
 			
 			[self addSubview:self.bTabBar];
 		}
@@ -87,11 +91,11 @@
 		[tabBar setItems:[items objectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange([self.tabBars indexOfObject:tabBar] * 5, len)]] animated:animated];
 	}
 	
-	self.contentSize = CGSizeMake(ceil(items.count / 5.0) * 320.0, 49.0);
+	self.contentSize = CGSizeMake(ceil(items.count / 5.0) * self.frame.size.width, 49.0);
 }
 
 - (int)currentTabBarTag {
-	return self.contentOffset.x / 320.0;
+	return self.contentOffset.x / self.frame.size.width;
 }
 
 - (int)selectedItemTag {
@@ -115,7 +119,7 @@
 			
 			return YES;
 		}
-		
+	
 	return NO;
 }
 
@@ -134,7 +138,7 @@
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-	[infiniTabBarDelegate infiniTabBar:self didScrollToTabBarWithTag:scrollView.contentOffset.x / 320.0];
+	[infiniTabBarDelegate infiniTabBar:self didScrollToTabBarWithTag:scrollView.contentOffset.x / self.frame.size.width];
 }
 
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
