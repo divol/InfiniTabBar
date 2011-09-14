@@ -11,7 +11,7 @@
 @synthesize tabBars;
 @synthesize aTabBar;
 @synthesize bTabBar;
-
+@synthesize arrow;
 
 -(UIImage*)makeTriangle:(CGRect)rect where:(int)where{
     
@@ -82,11 +82,13 @@
     [super didMoveToSuperview];
     
     [self arrowDecoration];
+    [self.superview addSubview:self.arrow];
 }
 
 -(void)arrowDecoration{
     
     int position = [self currentTabBarTag];
+    
     UIScreen *screen = [UIScreen mainScreen];
 	CGRect sbounds = screen.applicationFrame;
     
@@ -119,7 +121,7 @@
             [self.superview addSubview:imageviewleft];
             
             [UIView animateWithDuration:0.4 animations:^{
-                imageviewleft.alpha =0.9;
+                imageviewleft.alpha =0.5;
             }];
         }
         image=nil;
@@ -137,7 +139,7 @@
             // imageviewright.bounds = CGRectMake(290, 0,25,49);
             [self.superview addSubview:imageviewright];
             [UIView animateWithDuration:0.4 animations:^{
-                imageviewright.alpha = 0.9;
+                imageviewright.alpha = 0.5;
             }];
         }
         
@@ -185,10 +187,50 @@
 		
 		self.contentSize = CGSizeMake(x, 49.0);
         
+        
+        self.arrow = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tab-arrow.png"]] autorelease];
+				
+
 	}
 	 
     return self;
 }
+
+- (void)positionArrowAnimated:(BOOL)animated {
+    
+    int position = [self currentTabBarTag];
+    int tagofvisiblebar=-1;
+    UITabBar *tb = [self.tabBars objectAtIndex:position];
+    if (tb.selectedItem){
+        tagofvisiblebar=tb.selectedItem.tag;
+    }
+    int tag = [self selectedItemTag];
+    self.arrow.hidden = !(tagofvisiblebar == tag);
+    
+	if (animated) {
+		[UIView beginAnimations:nil context:NULL];
+		[UIView setAnimationDuration:0.2];
+	}
+	CGRect f = self.arrow.frame;
+    
+    
+    UIScreen *screen = [UIScreen mainScreen];
+	CGRect sbounds = screen.applicationFrame;
+
+    int nbitems = tb.items.count;
+    
+    float pos = (tag % 5) * ((sbounds.size.width/nbitems));
+    
+    f.origin.x = pos + (((sbounds.size.width/nbitems) / 2) - (f.size.width / 2));
+    f.origin.y= sbounds.size.height- 55;  
+	 
+     self.arrow.frame = f;
+	if (animated) {
+		[UIView commitAnimations];
+	}
+}
+
+
 //320
 - (void)setBounces:(BOOL)bounces {
 	if (bounces) {
@@ -270,6 +312,14 @@
 	return NO;
 }
 
+
+- (void)layoutSubviews {
+	[super layoutSubviews];
+		
+	[self positionArrowAnimated:NO];
+}
+
+
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
 	[infiniTabBarDelegate infiniTabBar:self didScrollToTabBarWithTag:scrollView.contentOffset.x / self.frame.size.width];
     
@@ -287,6 +337,8 @@
 			tabBar.selectedItem = nil;
 	
 	[infiniTabBarDelegate infiniTabBar:self didSelectItemWithTag:item.tag];
+    [self positionArrowAnimated:YES];	
+    
 }
 
 - (void)dealloc {

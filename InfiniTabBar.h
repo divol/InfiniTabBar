@@ -14,12 +14,15 @@
 	UITabBar *bTabBar;
     UIImageView *imageviewleft;
     UIImageView *imageviewright;
+    UIImageView *arrow;
 }
 
 @property (nonatomic, assign) id infiniTabBarDelegate;
 @property (nonatomic, retain) NSMutableArray *tabBars;
 @property (nonatomic, retain) UITabBar *aTabBar;
 @property (nonatomic, retain) UITabBar *bTabBar;
+@property (nonatomic, retain) UIImageView *arrow;
+
 
 -(void)arrowDecoration;
 - (id)initWithFrameAndItems:(CGRect)frame items:(NSArray *)items;
