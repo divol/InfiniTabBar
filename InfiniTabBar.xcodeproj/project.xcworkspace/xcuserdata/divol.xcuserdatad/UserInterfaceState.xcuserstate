@@ -755,6 +755,7 @@
 				</dict>
 			</array>
 		</dict>
+<<<<<<< HEAD
 		<string>PrimaryDocumentTimestamp</string>
 		<string>PrimaryDocumentVisibleCharacterRange</string>
 		<string>HideAllIssues</string>
@@ -762,6 +763,11 @@
 		<real>337632477.32127702</real>
 		<string>{1162, 1551}</string>
 		<string>{2182, 18}</string>
+=======
+		<real>337623870.79216403</real>
+		<string>{97, 1947}</string>
+		<string>{6949, 0}</string>
+>>>>>>> nop
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -3603,10 +3609,35 @@
 				</dict>
 			</array>
 		</dict>
+<<<<<<< HEAD
 		<string>Xcode.IDEKit.Navigator.Structure</string>
 		<string>Xcode.DebuggerKit.ThreadsStacksNavigator</string>
 		<string>SelectedNavigator</string>
 		<string>Xcode.IDEKit.Navigator.Issues</string>
+=======
+		<real>337623870.79453999</real>
+		<string>{97, 1947}</string>
+		<string>{6949, 0}</string>
+		<string>-scrollViewDidEndDecelerating:</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>23</integer>
+			</dict>
+			<key>NS.base</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>0</integer>
+			</dict>
+			<key>NS.relative</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>286</integer>
+			</dict>
+		</dict>
+		<string>file://localhost/Users/divol/Documents/Sources/InfiniTabBarDivol/InfiniTabBar.m</string>
+>>>>>>> nop
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -4120,8 +4151,12 @@
 				</dict>
 			</array>
 		</dict>
+<<<<<<< HEAD
 		<string>IDEUtilitiesArea</string>
 		<real>260</real>
+=======
+		<string>{{295, -226}, {1400, 974}}</string>
+>>>>>>> nop
 	</array>
 	<key>$top</key>
 	<dict>
