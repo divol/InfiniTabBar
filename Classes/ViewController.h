@@ -4,17 +4,19 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "InfiniTabBar.h"
 
-@interface ViewController : UIViewController <InfiniTabBarDelegate> {
-	InfiniTabBar *tabBar;
+#import "InfiniTabBarControler.h"
+
+
+@interface ViewController : InfiniTabBarControler {
+	
 	
 	// UI
 	UILabel *dLabel;
 	UILabel *fLabel;
 }
 
-@property (nonatomic, retain) InfiniTabBar *tabBar;
+
 
 // UI
 @property (nonatomic, retain) UILabel *dLabel;

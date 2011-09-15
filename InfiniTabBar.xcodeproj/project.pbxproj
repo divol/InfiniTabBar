@@ -21,6 +21,7 @@
 		E142310414209763003664FE /* down_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = E142310014209763003664FE /* down_arrow.png */; };
 		E1979FB91420E46B0044D062 /* tab-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = E1979FB71420E46B0044D062 /* tab-arrow.png */; };
 		E1979FBA1420E46B0044D062 /* tab-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1979FB81420E46B0044D062 /* tab-arrow@2x.png */; };
+		E1BD53561421FFDF000BE0B4 /* InfiniTabBarControler.m in Sources */ = {isa = PBXBuildFile; fileRef = E1BD53551421FFDF000BE0B4 /* InfiniTabBarControler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,8 @@
 		E142310014209763003664FE /* down_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down_arrow.png; sourceTree = "<group>"; };
 		E1979FB71420E46B0044D062 /* tab-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab-arrow.png"; sourceTree = "<group>"; };
 		E1979FB81420E46B0044D062 /* tab-arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab-arrow@2x.png"; sourceTree = "<group>"; };
+		E1BD53541421FFDF000BE0B4 /* InfiniTabBarControler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfiniTabBarControler.h; sourceTree = "<group>"; };
+		E1BD53551421FFDF000BE0B4 /* InfiniTabBarControler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfiniTabBarControler.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +72,8 @@
 				362D005E13AA412800E6091E /* InfiniTabBar.m */,
 				28D7ACF60DDB3853001CB0EB /* ViewController.h */,
 				28D7ACF70DDB3853001CB0EB /* ViewController.m */,
+				E1BD53541421FFDF000BE0B4 /* InfiniTabBarControler.h */,
+				E1BD53551421FFDF000BE0B4 /* InfiniTabBarControler.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -197,6 +202,7 @@
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				28D7ACF80DDB3853001CB0EB /* ViewController.m in Sources */,
 				362D005F13AA412800E6091E /* InfiniTabBar.m in Sources */,
+				E1BD53561421FFDF000BE0B4 /* InfiniTabBarControler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -102,11 +102,11 @@
         [imageviewright release];
         imageviewright=NULL;
     }
-    if (self.tabBars !=0){
+    if ((self.tabBars !=0) && (self.tabBars.count >0)){
         
         int way = 0;
         UIImage * image;
-        if (position > 0){
+        if (position > 0) {
             way = 8;
             //left
             image = [UIImage imageNamed:@"left_arrow"];
@@ -146,7 +146,9 @@
     }
 
 }
-- (id)initWithFrameAndItems:(CGRect)frame items:(NSArray *)items {
+
+
+- (id)initWithFrame:(CGRect)frame{
 	//self = [super initWithFrame:CGRectMake(0.0, 411.0, 320.0, 49.0)];
 	// TODO:
 	
@@ -164,32 +166,32 @@
 		
 		float x = 0.0;
 		
-		for (double d = 0; d < ceil(items.count / 5.0); d ++) {
-			UITabBar *tabBar = [[UITabBar alloc] initWithFrame:CGRectMake(x, 0.0, sbounds.size.width, 49.0)];
-			tabBar.delegate = self;
-			
-			int len = 0;
-			
-			for (int i = d * 5; i < d * 5 + 5; i ++)
-				if (i < items.count)
-					len ++;
-			
-			tabBar.items = [items objectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(d * 5, len)]];
-			
-			[self addSubview:tabBar];
-			
-			[self.tabBars addObject:tabBar];
-			
-			[tabBar release];
-			
-			x += self.frame.size.width;
-		}
-		
+				
 		self.contentSize = CGSizeMake(x, 49.0);
         
         
         self.arrow = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tab-arrow.png"]] autorelease];
-				
+        
+        
+	}
+    
+    return self;
+}
+
+
+
+- (id)initWithFrameAndItems:(CGRect)frame items:(NSArray *)items {
+	//self = [super initWithFrame:CGRectMake(0.0, 411.0, 320.0, 49.0)];
+	// TODO:
+	
+	UIScreen *screen = [UIScreen mainScreen];
+	CGRect sbounds = screen.applicationFrame;
+	self = [self initWithFrame:CGRectMake(0, sbounds.size.height - 49.0, sbounds.size.width, 49.0)];
+	// Doesn't work. self is nil at this point.
+	
+    if (self) {
+		[self setItems:items animated:NO];
+                
 
 	}
 	 
@@ -198,36 +200,38 @@
 
 - (void)positionArrowAnimated:(BOOL)animated {
     
-    int position = [self currentTabBarTag];
-    int tagofvisiblebar=-1;
-    UITabBar *tb = [self.tabBars objectAtIndex:position];
-    if (tb.selectedItem){
-        tagofvisiblebar=tb.selectedItem.tag;
-    }
-    int tag = [self selectedItemTag];
-    self.arrow.hidden = !(tagofvisiblebar == tag);
-    
-	if (animated) {
-		[UIView beginAnimations:nil context:NULL];
-		[UIView setAnimationDuration:0.2];
-	}
-	CGRect f = self.arrow.frame;
-    
-    
-    UIScreen *screen = [UIScreen mainScreen];
-	CGRect sbounds = screen.applicationFrame;
+    if (self.tabBars.count !=0){
+        int position = [self currentTabBarTag];
+        int tagofvisiblebar=-1;
+        UITabBar *tb = [self.tabBars objectAtIndex:position];
+        if (tb.selectedItem){
+            tagofvisiblebar=tb.selectedItem.tag;
+        }
+        int tag = [self selectedItemTag];
+        self.arrow.hidden = !(tagofvisiblebar == tag);
+        
+        if (animated) {
+            [UIView beginAnimations:nil context:NULL];
+            [UIView setAnimationDuration:0.2];
+        }
+        CGRect f = self.arrow.frame;
+        
+        
+        UIScreen *screen = [UIScreen mainScreen];
+        CGRect sbounds = screen.applicationFrame;
 
-    int nbitems = tb.items.count;
-    
-    float pos = (tag % 5) * ((sbounds.size.width/nbitems));
-    
-    f.origin.x = pos + (((sbounds.size.width/nbitems) / 2) - (f.size.width / 2));
-    f.origin.y= sbounds.size.height- 55;  
-	 
-     self.arrow.frame = f;
-	if (animated) {
-		[UIView commitAnimations];
-	}
+        int nbitems = tb.items.count;
+        
+        float pos = (tag % 5) * ((sbounds.size.width/nbitems));
+        
+        f.origin.x = pos + (((sbounds.size.width/nbitems) / 2) - (f.size.width / 2));
+        f.origin.y= sbounds.size.height- 55;  
+         
+         self.arrow.frame = f;
+        if (animated) {
+            [UIView commitAnimations];
+        }
+    }
 }
 
 
@@ -256,17 +260,54 @@
 }
 
 - (void)setItems:(NSArray *)items animated:(BOOL)animated {
-	for (UITabBar *tabBar in self.tabBars) {
-		int len = 0;
-		
-		for (int i = [self.tabBars indexOfObject:tabBar] * 5; i < [self.tabBars indexOfObject:tabBar] * 5 + 5; i ++)
-			if (i < items.count)
-				len ++;
-		
-		[tabBar setItems:[items objectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange([self.tabBars indexOfObject:tabBar] * 5, len)]] animated:animated];
-	}
-	
-	self.contentSize = CGSizeMake(ceil(items.count / 5.0) * self.frame.size.width, 49.0);
+    
+     if (self.tabBars.count !=0){
+         
+        for (UITabBar *tabBar in self.tabBars) {
+            
+            int len = 0;
+            for (int i = [self.tabBars indexOfObject:tabBar] * 5; i < [self.tabBars indexOfObject:tabBar] * 5 + 5; i ++)
+                if (i < items.count)
+                    len ++;
+            
+            [tabBar setItems:[items objectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange([self.tabBars indexOfObject:tabBar] * 5, len)]] animated:animated];
+        }
+        
+        self.contentSize = CGSizeMake(ceil(items.count / 5.0) * self.frame.size.width, 49.0);
+        
+       
+     }else{
+         UIScreen *screen = [UIScreen mainScreen];
+         CGRect sbounds = screen.applicationFrame;
+         
+         float x = 0.0;
+         
+         for (double d = 0; d < ceil(items.count / 5.0); d ++) {
+             UITabBar *tabBar = [[UITabBar alloc] initWithFrame:CGRectMake(x, 0.0, sbounds.size.width, 49.0)];
+             tabBar.delegate = self;
+             
+             int len = 0;
+             
+             for (int i = d * 5; i < d * 5 + 5; i ++)
+                 if (i < items.count)
+                     len ++;
+             
+             tabBar.items = [items objectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(d * 5, len)]];
+             
+             [self addSubview:tabBar];
+             
+             [self.tabBars addObject:tabBar];
+             
+             [tabBar release];
+             
+             x += self.frame.size.width;
+         }
+         
+         self.contentSize = CGSizeMake(x, 49.0);
+         
+     }
+     [self positionArrowAnimated:animated];
+     [self arrowDecoration];
 }
 
 - (int)currentTabBarTag {

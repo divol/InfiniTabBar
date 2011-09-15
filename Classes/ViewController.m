@@ -7,7 +7,7 @@
 
 @implementation ViewController
 
-@synthesize tabBar;
+
 
 // UI
 @synthesize dLabel;
@@ -25,23 +25,27 @@
 	UITabBarItem *history = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemHistory tag:5];
 	UITabBarItem *bookmarks = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemBookmarks tag:6];
 	UITabBarItem *search = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemSearch tag:7];
-	UITabBarItem *downloads = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemDownloads tag:8]; downloads.badgeValue = @"2";
+	UITabBarItem *downloads = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemDownloads tag:8]; downloads.badgeValue = @"M";
 	UITabBarItem *mostRecent = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemMostRecent tag:9];
 	UITabBarItem *mostViewed = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemMostViewed tag:10];
 	
 	// Tab bar
-	self.tabBar = [[InfiniTabBar alloc] initWithFrameAndItems:self.view.frame items:[NSArray arrayWithObjects:favorites,
-																					 topRated,
-																					 featured,
-																					 recents,
-																					 contacts,
-																					 history,
-																					 bookmarks,
-																					 search,
-																					 downloads,
-																					 mostRecent,
-																					 mostViewed, nil]];
 	
+	 
+    [self.tabBar setItems:[NSArray arrayWithObjects:favorites,
+                           topRated,
+                           featured,
+                           recents,
+                           contacts,
+                           history,
+                           bookmarks,
+                           search,
+                           downloads,
+                           mostRecent,mostViewed,
+                             nil] animated:YES];
+    
+
+
 	[favorites release];
 	[topRated release];
 	[featured release];
@@ -56,10 +60,9 @@
 	
 	// Don't show scroll indicator
 	self.tabBar.showsHorizontalScrollIndicator = NO;
-	self.tabBar.infiniTabBarDelegate = self;
 	self.tabBar.bounces = NO;
 	
-	[self.view addSubview:self.tabBar];
+	
 	
    
 	// UI
@@ -104,7 +107,7 @@
 	[cLabel release];
 	
 	self.dLabel = [[UILabel alloc] initWithFrame:CGRectMake(258.0, 315.0, 42.0, 21.0)];
-	self.dLabel.text = @"1";
+	self.dLabel.text = @"";
 	self.dLabel.textAlignment = UITextAlignmentRight;
 	
 	[self.view addSubview:self.dLabel];
@@ -221,11 +224,13 @@
 	[self.tabBar scrollToTabBarWithTag:self.tabBar.currentTabBarTag + 1 animated:YES];
 }
 
-- (void)infiniTabBar:(InfiniTabBar *)tabBar didScrollToTabBarWithTag:(int)tag {
+- (void)infiniTabBar:(InfiniTabBar *)atabBar didScrollToTabBarWithTag:(int)tag {
+    [super infiniTabBar:atabBar didScrollToTabBarWithTag:tag];
 	self.dLabel.text = [NSString stringWithFormat:@"%d", tag + 1];
 }
 
-- (void)infiniTabBar:(InfiniTabBar *)tabBar didSelectItemWithTag:(int)tag {
+- (void)infiniTabBar:(InfiniTabBar *)atabBar didSelectItemWithTag:(int)tag {
+    [super infiniTabBar:atabBar didSelectItemWithTag:tag];
 	self.fLabel.text = [NSString stringWithFormat:@"%d", tag + 1];
 }
 
@@ -234,7 +239,6 @@
 	[fLabel release];
 	[dLabel release];
 	
-	[tabBar release];
 	
     [super dealloc];
 }
