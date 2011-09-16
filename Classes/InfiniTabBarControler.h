@@ -11,6 +11,14 @@
 
 @interface InfiniTabBarControler : UIViewController <InfiniTabBarDelegate> {
     InfiniTabBar *tabBar;
+    
+     NSMutableArray         *viewControllers;
+     UIViewController       *currentViewController;
 }
 @property (nonatomic, retain) InfiniTabBar *tabBar;
+@property (nonatomic, retain) NSMutableArray *viewControllers;
+@property (nonatomic, retain) UIViewController       *currentViewController;
+
+
+- (void)addViewControllers:(NSArray *)aviewControllers animated:(BOOL)animated;
 @end

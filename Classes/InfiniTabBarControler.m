@@ -11,7 +11,8 @@
 
 @implementation InfiniTabBarControler
 @synthesize tabBar;
-
+@synthesize viewControllers;
+@synthesize currentViewController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,6 +27,8 @@
 {
     
     self.tabBar=nil;
+    self.viewControllers=nil;
+    self.currentViewController=nil;
     [super dealloc];
 }
 
@@ -63,6 +66,10 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
+    if (self.currentViewController){
+        [self.currentViewController.view removeFromSuperview]; 
+        self.currentViewController=nil;
+    }
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
@@ -74,12 +81,34 @@
 }
 
 
+// need to mimik some UITabBarControler features
+- (void)addViewControllers:(NSArray *)aviewControllers animated:(BOOL)animated{
+    self.viewControllers=[NSMutableArray arrayWithArray:aviewControllers]; // add the view controlers
+      self.currentViewController = [self.viewControllers objectAtIndex:0];
+    [self.view addSubview:self.currentViewController.view];
+    [self.view bringSubviewToFront:self.currentViewController.view]; 
+}
+
 #pragma mark delegate
 - (void)infiniTabBar:(InfiniTabBar *)tabBar didScrollToTabBarWithTag:(int)tag {
     //nop
 }
 
 - (void)infiniTabBar:(InfiniTabBar *)tabBar didSelectItemWithTag:(int)tag {
+    if (self.viewControllers){
+        if (self.currentViewController){
+            [self.currentViewController.view removeFromSuperview]; 
+            self.currentViewController=nil;
+            
+        }
+        if (tag < self.viewControllers.count){
+           
+            self.currentViewController = [self.viewControllers objectAtIndex:tag];
+            
+           [self.view addSubview:self.currentViewController.view];
+            [self.view bringSubviewToFront:self.currentViewController.view]; 
+        }
+    }
       //nop
 }
 
