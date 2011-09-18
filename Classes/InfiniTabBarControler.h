@@ -14,10 +14,12 @@
     
      NSMutableArray         *viewControllers;
      UIViewController       *currentViewController;
+    id                      delegate; //compatbility and future use
 }
 @property (nonatomic, retain) InfiniTabBar *tabBar;
 @property (nonatomic, retain) NSMutableArray *viewControllers;
 @property (nonatomic, retain) UIViewController       *currentViewController;
+@property (nonatomic, assign) id delegate;
 
 
 - (void)addViewControllers:(NSArray *)aviewControllers animated:(BOOL)animated;

@@ -13,7 +13,7 @@
 @synthesize tabBar;
 @synthesize viewControllers;
 @synthesize currentViewController;
-
+@synthesize delegate;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -83,8 +83,20 @@
 
 // need to mimik some UITabBarControler features
 - (void)addViewControllers:(NSArray *)aviewControllers animated:(BOOL)animated{
+    
+    if (self.tabBar.tabBars.count ==0){
+        //no tabbaritem added, but UIViewControler have lazy one !!
+        
+        NSMutableArray *marray = [[[NSMutableArray alloc] init] autorelease];
+        for ( UIViewController *ctrl in aviewControllers){
+            [marray addObject:ctrl.tabBarItem];
+        }
+        
+        [self.tabBar setItems:[NSArray arrayWithArray:marray] animated:YES];
+        
+    }
     self.viewControllers=[NSMutableArray arrayWithArray:aviewControllers]; // add the view controlers
-      self.currentViewController = [self.viewControllers objectAtIndex:0];
+    self.currentViewController = [self.viewControllers objectAtIndex:0];
     [self.view addSubview:self.currentViewController.view];
     [self.view bringSubviewToFront:self.currentViewController.view]; 
 }

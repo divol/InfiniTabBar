@@ -14,8 +14,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
+    
+    UIViewControlerForTest *vctrl1 =[[UIViewControlerForTest alloc] initWithNibName:@"UIViewControlerForTest" bundle:nil];
+    [vctrl1 changeTexte:@"0"];
+    
+    //as a matter of fact an UIViewControler manage a lazy UITabBarItem, it can be used here !
+    vctrl1.tabBarItem.image=nil;
+    vctrl1.tabBarItem.title= @"Favorites";
+    vctrl1.tabBarItem.tag= 0;
+
+    
+    
 	// Items
-	UITabBarItem *favorites = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemFavorites tag:0];
+    // or it's possible to create a specific UITabBarItem.
+	//UITabBarItem *favorites = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemFavorites tag:0];
 	UITabBarItem *topRated = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemTopRated tag:1];
 	UITabBarItem *featured = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemFeatured tag:2];
 	UITabBarItem *recents = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemRecents tag:3];
@@ -30,7 +42,7 @@
 	// Tab bar
 	
 	 
-    [self.tabBar setItems:[NSArray arrayWithObjects:favorites,
+    [self.tabBar setItems:[NSArray arrayWithObjects:vctrl1.tabBarItem,
                            topRated,
                            featured,
                            recents,
@@ -44,7 +56,7 @@
     
 
    
-	[favorites release];
+	//[favorites release];
 	[topRated release];
 	[featured release];
 	[recents release];
@@ -58,10 +70,7 @@
 	
     
         
-    UIViewControlerForTest *vctrl1 =[[UIViewControlerForTest alloc] initWithNibName:@"UIViewControlerForTest" bundle:nil];
-    [vctrl1 changeTexte:@"0"];
-    
-    
+        
     UIViewControlerForTest *vctrl2 =[[UIViewControlerForTest alloc] initWithNibName:@"UIViewControlerForTest" bundle:nil];
     [vctrl2 changeTexte:@"1"];
     
