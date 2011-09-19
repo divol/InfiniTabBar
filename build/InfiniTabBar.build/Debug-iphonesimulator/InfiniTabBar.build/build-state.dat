@@ -44,6 +44,204 @@ c000000004CC12883000000000074D7B0
 t1287727235
 s7657392
 
+N/Users/divol/Documents/Sources/InfiniTabBar/Classes/../InfiniTabBar.m
+c000000004E76EFF90000000000002B0D
+t1316417529
+s11021
+i"InfiniTabBar.h"
+
+N/Users/divol/Documents/Sources/InfiniTabBar/Classes/AppDelegate.h
+c000000004E76EFF90000000000000176
+t1316417529
+s374
+i<UIKit/UIKit.h>
+
+N/Users/divol/Documents/Sources/InfiniTabBar/Classes/AppDelegate.m
+c000000004E76EFF900000000000002FD
+t1316417529
+s765
+i"AppDelegate.h"
+i"ViewController.h"
+
+N/Users/divol/Documents/Sources/InfiniTabBar/Classes/InfiniTabBarControler.h
+c000000004E76EFF9000000000000031D
+t1316417529
+s797
+i<UIKit/UIKit.h>
+i"InfiniTabBar.h"
+
+N/Users/divol/Documents/Sources/InfiniTabBar/Classes/InfiniTabBarControler.m
+c000000004E76EFF90000000000000DD9
+t1316417529
+s3545
+i"InfiniTabBarControler.h"
+
+N/Users/divol/Documents/Sources/InfiniTabBar/Classes/UIViewControlerForTest.h
+c000000004E76EFF90000000000000134
+t1316417529
+s308
+i<UIKit/UIKit.h>
+
+N/Users/divol/Documents/Sources/InfiniTabBar/Classes/UIViewControlerForTest.m
+c000000004E76EFF900000000000004F3
+t1316417529
+s1267
+i"UIViewControlerForTest.h"
+
+N/Users/divol/Documents/Sources/InfiniTabBar/Classes/UIViewControlerForTest.xib
+c000000004E76EFF9000000000000280A
+t1316417529
+s10250
+
+N/Users/divol/Documents/Sources/InfiniTabBar/Classes/ViewController.h
+c000000004E76EFF900000000000000C4
+t1316417529
+s196
+i<UIKit/UIKit.h>
+i"InfiniTabBarControler.h"
+
+N/Users/divol/Documents/Sources/InfiniTabBar/Classes/ViewController.m
+c000000004E76EFF90000000000001602
+t1316417529
+s5634
+i"ViewController.h"
+i"UIViewControlerForTest.h"
+
+N/Users/divol/Documents/Sources/InfiniTabBar/InfiniTabBar.h
+c000000004E76EFF900000000000004E9
+t1316417529
+s1257
+i<UIKit/UIKit.h>
+
+N/Users/divol/Documents/Sources/InfiniTabBar/InfiniTabBar_Prefix.pch
+c000000004E76EFF900000000000000C0
+t1316417529
+s192
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/divol/Documents/Sources/InfiniTabBar/MainWindow.xib
+c000000004E76EFF90000000000004DEA
+t1316417529
+s19946
+
+N/Users/divol/Documents/Sources/InfiniTabBar/build/Debug-iphonesimulator/InfiniTabBar.app
+t1316417529
+s204
+
+N/Users/divol/Documents/Sources/InfiniTabBar/build/Debug-iphonesimulator/InfiniTabBar.app.dSYM
+t1316417529
+s102
+
+N/Users/divol/Documents/Sources/InfiniTabBar/build/Debug-iphonesimulator/InfiniTabBar.app/InfiniTabBar
+t1316417529
+s39708
+
+N/Users/divol/Documents/Sources/InfiniTabBar/build/Debug-iphonesimulator/InfiniTabBar.app/Info.plist
+t1316417529
+s610
+
+N/Users/divol/Documents/Sources/InfiniTabBar/build/Debug-iphonesimulator/InfiniTabBar.app/MainWindow.nib
+t1316417529
+s1131
+
+N/Users/divol/Documents/Sources/InfiniTabBar/build/Debug-iphonesimulator/InfiniTabBar.app/PkgInfo
+t1316417529
+s8
+
+N/Users/divol/Documents/Sources/InfiniTabBar/build/Debug-iphonesimulator/InfiniTabBar.app/UIViewControlerForTest.nib
+t2
+s0
+
+N/Users/divol/Documents/Sources/InfiniTabBar/build/Debug-iphonesimulator/InfiniTabBar.app/down_arrow.png
+t2
+s0
+
+N/Users/divol/Documents/Sources/InfiniTabBar/build/Debug-iphonesimulator/InfiniTabBar.app/left_arrow.png
+t2
+s0
+
+N/Users/divol/Documents/Sources/InfiniTabBar/build/Debug-iphonesimulator/InfiniTabBar.app/right_arrow.png
+t2
+s0
+
+N/Users/divol/Documents/Sources/InfiniTabBar/build/Debug-iphonesimulator/InfiniTabBar.app/tab-arrow.png
+t2
+s0
+
+N/Users/divol/Documents/Sources/InfiniTabBar/build/Debug-iphonesimulator/InfiniTabBar.app/tab-arrow@2x.png
+t2
+s0
+
+N/Users/divol/Documents/Sources/InfiniTabBar/build/Debug-iphonesimulator/InfiniTabBar.app/up_arrow.png
+t2
+s0
+
+N/Users/divol/Documents/Sources/InfiniTabBar/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/Objects-normal/i386/AppDelegate.o
+t1316417529
+s48964
+
+N/Users/divol/Documents/Sources/InfiniTabBar/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/Objects-normal/i386/InfiniTabBar.LinkFileList
+c000000004E76EFF90000000000000251
+t1316417529
+s593
+
+N/Users/divol/Documents/Sources/InfiniTabBar/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/Objects-normal/i386/InfiniTabBar.o
+t1316417529
+s63580
+
+N/Users/divol/Documents/Sources/InfiniTabBar/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/Objects-normal/i386/InfiniTabBarControler.o
+t2
+s0
+
+N/Users/divol/Documents/Sources/InfiniTabBar/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/Objects-normal/i386/UIViewControlerForTest.o
+t2
+s0
+
+N/Users/divol/Documents/Sources/InfiniTabBar/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/Objects-normal/i386/ViewController.o
+t1316417529
+s66980
+
+N/Users/divol/Documents/Sources/InfiniTabBar/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/Objects-normal/i386/main.o
+t1316417529
+s6332
+
+N/Users/divol/Documents/Sources/InfiniTabBar/down_arrow.png
+c000000004E76EFF9000000000000080F
+t1316417529
+s2063
+
+N/Users/divol/Documents/Sources/InfiniTabBar/left_arrow.png
+c000000004E76EFF900000000000006BC
+t1316417529
+s1724
+
+N/Users/divol/Documents/Sources/InfiniTabBar/main.m
+c000000004E76EFF9000000000000011C
+t1316417529
+s284
+i<UIKit/UIKit.h>
+
+N/Users/divol/Documents/Sources/InfiniTabBar/right_arrow.png
+c000000004E76EFF900000000000006CA
+t1316417529
+s1738
+
+N/Users/divol/Documents/Sources/InfiniTabBar/tab-arrow.png
+c000000004E76EFF900000000000003DF
+t1316417529
+s991
+
+N/Users/divol/Documents/Sources/InfiniTabBar/tab-arrow@2x.png
+c000000004E76EFF9000000000000042E
+t1316417529
+s1070
+
+N/Users/divol/Documents/Sources/InfiniTabBar/up_arrow.png
+c000000004E76EFF900000000000007F3
+t1316417529
+s2035
+
 N/Users/divol/Documents/Sources/InfiniTabBarDivol/Classes/../InfiniTabBar.m
 c000000004E6F71F1000000000000108E
 t1315926513
@@ -145,18 +343,25 @@ t1315924556
 s284
 i<UIKit/UIKit.h>
 
+N/var/folders/zh/zhU0v3DIH8CblzfcMQ5Z3++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/InfiniTabBar_Prefix-drjcshwmfkalmjaodxqqcftovlni/InfiniTabBar_Prefix.pch.gch
+t1315924037
+s15453392
+
 N/var/folders/zh/zhU0v3DIH8CblzfcMQ5Z3++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/InfiniTabBar_Prefix-fbxmxofbqakaixaeywkoxkkbgcrs/InfiniTabBar_Prefix.pch.gch
 t1315925921
 s15453392
 
 NInfiniTabBar-Info.plist
-c000000004E6F6A4C0000000000000377
-t1315924556
-s887
+c000000004E76EFF900000000000003E9
+t1316417529
+s1001
 
 CCheck dependencies
 r0
 lSLF07#2@18"Check dependencies337619355#337619355#0(0"0(0#1#0"8610624320#0"0#
+
+CCompileC build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/Objects-normal/i386/AppDelegate.o /Users/divol/Documents/Sources/InfiniTabBar/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+r0
 
 CCompileC build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/Objects-normal/i386/AppDelegate.o /Users/divol/Documents/Sources/InfiniTabBarDivol/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s337618721.778039
@@ -171,6 +376,9 @@ xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@78"Compile /Users/divol/Documents/Sources/InfiniTabBarDivol/Classes/AppDelegate.m337618721#337618721#0(0"0(0#0#70"/Users/divol/Documents/Sources/InfiniTabBarDivol/Classes/AppDelegate.m8612230752#2205"    cd /Users/divol/Documents/Sources/InfiniTabBarDivol    setenv LANG en_US.US-ASCII    setenv PATH "/Developer4.0/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer4.0/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/git/bin"    /Developer4.0/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer4.0/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/divol/Documents/Sources/InfiniTabBarDivol/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/InfiniTabBar-generated-files.hmap -I/Users/divol/Documents/Sources/InfiniTabBarDivol/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/InfiniTabBar-own-target-headers.hmap -I/Users/divol/Documents/Sources/InfiniTabBarDivol/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/InfiniTabBar-all-target-headers.hmap -iquote /Users/divol/Documents/Sources/InfiniTabBarDivol/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/InfiniTabBar-project-headers.hmap -F/Users/divol/Documents/Sources/InfiniTabBarDivol/build/Debug-iphonesimulator -I/Users/divol/Documents/Sources/InfiniTabBarDivol/build/Debug-iphonesimulator/include -I/Users/divol/Documents/Sources/InfiniTabBarDivol/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/DerivedSources/i386 -I/Users/divol/Documents/Sources/InfiniTabBarDivol/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/DerivedSources -include /var/folders/zh/zhU0v3DIH8CblzfcMQ5Z3++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/InfiniTabBar_Prefix-fbxmxofbqakaixaeywkoxkkbgcrs/InfiniTabBar_Prefix.pch -c /Users/divol/Documents/Sources/InfiniTabBarDivol/Classes/AppDelegate.m -o /Users/divol/Documents/Sources/InfiniTabBarDivol/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/Objects-normal/i386/AppDelegate.o0#
 
+CCompileC build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/Objects-normal/i386/InfiniTabBar.o /Users/divol/Documents/Sources/InfiniTabBar/Classes/../InfiniTabBar.m normal i386 objective-c com.apple.compilers.gcc.4_2
+r0
+
 CCompileC build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/Objects-normal/i386/InfiniTabBar.o /Users/divol/Documents/Sources/InfiniTabBarDivol/Classes/../InfiniTabBar.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s337619315.196336
 e337619315.346640
@@ -183,6 +391,15 @@ xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@82"Compile /Users/divol/Documents/Sources/InfiniTabBarDivol/Classes/../InfiniTabBar.m337619315#337619315#0(0"0(0#0#74"/Users/divol/Documents/Sources/InfiniTabBarDivol/Classes/../InfiniTabBar.m8611238144#2210"    cd /Users/divol/Documents/Sources/InfiniTabBarDivol    setenv LANG en_US.US-ASCII    setenv PATH "/Developer4.0/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer4.0/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/git/bin"    /Developer4.0/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer4.0/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/divol/Documents/Sources/InfiniTabBarDivol/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/InfiniTabBar-generated-files.hmap -I/Users/divol/Documents/Sources/InfiniTabBarDivol/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/InfiniTabBar-own-target-headers.hmap -I/Users/divol/Documents/Sources/InfiniTabBarDivol/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/InfiniTabBar-all-target-headers.hmap -iquote /Users/divol/Documents/Sources/InfiniTabBarDivol/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/InfiniTabBar-project-headers.hmap -F/Users/divol/Documents/Sources/InfiniTabBarDivol/build/Debug-iphonesimulator -I/Users/divol/Documents/Sources/InfiniTabBarDivol/build/Debug-iphonesimulator/include -I/Users/divol/Documents/Sources/InfiniTabBarDivol/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/DerivedSources/i386 -I/Users/divol/Documents/Sources/InfiniTabBarDivol/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/DerivedSources -include /var/folders/zh/zhU0v3DIH8CblzfcMQ5Z3++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/InfiniTabBar_Prefix-fbxmxofbqakaixaeywkoxkkbgcrs/InfiniTabBar_Prefix.pch -c /Users/divol/Documents/Sources/InfiniTabBarDivol/Classes/../InfiniTabBar.m -o /Users/divol/Documents/Sources/InfiniTabBarDivol/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/Objects-normal/i386/InfiniTabBar.o0#
+
+CCompileC build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/Objects-normal/i386/InfiniTabBarControler.o /Users/divol/Documents/Sources/InfiniTabBar/Classes/InfiniTabBarControler.m normal i386 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/Objects-normal/i386/UIViewControlerForTest.o /Users/divol/Documents/Sources/InfiniTabBar/Classes/UIViewControlerForTest.m normal i386 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/Objects-normal/i386/ViewController.o /Users/divol/Documents/Sources/InfiniTabBar/Classes/ViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+r0
 
 CCompileC build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/Objects-normal/i386/ViewController.o /Users/divol/Documents/Sources/InfiniTabBarDivol/Classes/ViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s337618721.961568
@@ -197,6 +414,9 @@ xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@81"Compile /Users/divol/Documents/Sources/InfiniTabBarDivol/Classes/ViewController.m337618721#337618722#0(0"0(0#0#73"/Users/divol/Documents/Sources/InfiniTabBarDivol/Classes/ViewController.m8624783776#2211"    cd /Users/divol/Documents/Sources/InfiniTabBarDivol    setenv LANG en_US.US-ASCII    setenv PATH "/Developer4.0/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer4.0/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/git/bin"    /Developer4.0/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer4.0/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/divol/Documents/Sources/InfiniTabBarDivol/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/InfiniTabBar-generated-files.hmap -I/Users/divol/Documents/Sources/InfiniTabBarDivol/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/InfiniTabBar-own-target-headers.hmap -I/Users/divol/Documents/Sources/InfiniTabBarDivol/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/InfiniTabBar-all-target-headers.hmap -iquote /Users/divol/Documents/Sources/InfiniTabBarDivol/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/InfiniTabBar-project-headers.hmap -F/Users/divol/Documents/Sources/InfiniTabBarDivol/build/Debug-iphonesimulator -I/Users/divol/Documents/Sources/InfiniTabBarDivol/build/Debug-iphonesimulator/include -I/Users/divol/Documents/Sources/InfiniTabBarDivol/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/DerivedSources/i386 -I/Users/divol/Documents/Sources/InfiniTabBarDivol/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/DerivedSources -include /var/folders/zh/zhU0v3DIH8CblzfcMQ5Z3++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/InfiniTabBar_Prefix-fbxmxofbqakaixaeywkoxkkbgcrs/InfiniTabBar_Prefix.pch -c /Users/divol/Documents/Sources/InfiniTabBarDivol/Classes/ViewController.m -o /Users/divol/Documents/Sources/InfiniTabBarDivol/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/Objects-normal/i386/ViewController.o0#
 
+CCompileC build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/Objects-normal/i386/main.o /Users/divol/Documents/Sources/InfiniTabBar/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+r0
+
 CCompileC build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/Objects-normal/i386/main.o /Users/divol/Documents/Sources/InfiniTabBarDivol/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s337618721.777002
 e337618721.961345
@@ -210,6 +430,12 @@ xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@63"Compile /Users/divol/Documents/Sources/InfiniTabBarDivol/main.m337618721#337618721#0(0"0(0#0#55"/Users/divol/Documents/Sources/InfiniTabBarDivol/main.m8609902208#2183"    cd /Users/divol/Documents/Sources/InfiniTabBarDivol    setenv LANG en_US.US-ASCII    setenv PATH "/Developer4.0/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer4.0/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/git/bin"    /Developer4.0/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer4.0/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/divol/Documents/Sources/InfiniTabBarDivol/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/InfiniTabBar-generated-files.hmap -I/Users/divol/Documents/Sources/InfiniTabBarDivol/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/InfiniTabBar-own-target-headers.hmap -I/Users/divol/Documents/Sources/InfiniTabBarDivol/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/InfiniTabBar-all-target-headers.hmap -iquote /Users/divol/Documents/Sources/InfiniTabBarDivol/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/InfiniTabBar-project-headers.hmap -F/Users/divol/Documents/Sources/InfiniTabBarDivol/build/Debug-iphonesimulator -I/Users/divol/Documents/Sources/InfiniTabBarDivol/build/Debug-iphonesimulator/include -I/Users/divol/Documents/Sources/InfiniTabBarDivol/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/DerivedSources/i386 -I/Users/divol/Documents/Sources/InfiniTabBarDivol/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/DerivedSources -include /var/folders/zh/zhU0v3DIH8CblzfcMQ5Z3++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/InfiniTabBar_Prefix-fbxmxofbqakaixaeywkoxkkbgcrs/InfiniTabBar_Prefix.pch -c /Users/divol/Documents/Sources/InfiniTabBarDivol/main.m -o /Users/divol/Documents/Sources/InfiniTabBarDivol/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/Objects-normal/i386/main.o0#
 
+CCompileXIB /Users/divol/Documents/Sources/InfiniTabBar/Classes/UIViewControlerForTest.xib
+r0
+
+CCompileXIB /Users/divol/Documents/Sources/InfiniTabBar/MainWindow.xib
+r0
+
 CCompileXIB /Users/divol/Documents/Sources/InfiniTabBarDivol/MainWindow.xib
 s337618717.514570
 e337618718.791097
@@ -217,6 +443,27 @@ r1
 xCompileXIB
 x/Users/divol/Documents/Sources/InfiniTabBarDivol/MainWindow.xib
 lSLF07#2@25"CompileXIB MainWindow.xib337618717#337618718#0(0"0(0#0#63"/Users/divol/Documents/Sources/InfiniTabBarDivol/MainWindow.xib8623036512#664"    cd /Users/divol/Documents/Sources/InfiniTabBarDivol    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer4.0/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer4.0/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/git/bin"    /Developer4.0/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/divol/Documents/Sources/InfiniTabBarDivol/build/Debug-iphonesimulator/InfiniTabBar.app/MainWindow.nib /Users/divol/Documents/Sources/InfiniTabBarDivol/MainWindow.xib --sdk /Developer4.0/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCpResource build/Debug-iphonesimulator/InfiniTabBar.app/down_arrow.png down_arrow.png
+r0
+
+CCpResource build/Debug-iphonesimulator/InfiniTabBar.app/left_arrow.png left_arrow.png
+r0
+
+CCpResource build/Debug-iphonesimulator/InfiniTabBar.app/right_arrow.png right_arrow.png
+r0
+
+CCpResource build/Debug-iphonesimulator/InfiniTabBar.app/tab-arrow.png tab-arrow.png
+r0
+
+CCpResource build/Debug-iphonesimulator/InfiniTabBar.app/tab-arrow@2x.png tab-arrow@2x.png
+r0
+
+CCpResource build/Debug-iphonesimulator/InfiniTabBar.app/up_arrow.png up_arrow.png
+r0
+
+CGenerateDSYMFile /Users/divol/Documents/Sources/InfiniTabBar/build/Debug-iphonesimulator/InfiniTabBar.app.dSYM /Users/divol/Documents/Sources/InfiniTabBar/build/Debug-iphonesimulator/InfiniTabBar.app/InfiniTabBar
+r0
 
 CGenerateDSYMFile /Users/divol/Documents/Sources/InfiniTabBarDivol/build/Debug-iphonesimulator/InfiniTabBar.app.dSYM /Users/divol/Documents/Sources/InfiniTabBarDivol/build/Debug-iphonesimulator/InfiniTabBar.app/InfiniTabBar
 s337619315.369456
@@ -226,6 +473,9 @@ xGenerateDSYMFile
 x/Users/divol/Documents/Sources/InfiniTabBarDivol/build/Debug-iphonesimulator/InfiniTabBar.app.dSYM
 x/Users/divol/Documents/Sources/InfiniTabBarDivol/build/Debug-iphonesimulator/InfiniTabBar.app/InfiniTabBar
 lSLF07#2@124"GenerateDSYMFile build/Debug-iphonesimulator/InfiniTabBar.app.dSYM build/Debug-iphonesimulator/InfiniTabBar.app/InfiniTabBar337619315#337619315#0(0"0(0#0#106"/Users/divol/Documents/Sources/InfiniTabBarDivol/build/Debug-iphonesimulator/InfiniTabBar.app/InfiniTabBar8621446432#484"    cd /Users/divol/Documents/Sources/InfiniTabBarDivol    setenv PATH "/Developer4.0/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer4.0/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/git/bin"    /Developer4.0/usr/bin/dsymutil /Users/divol/Documents/Sources/InfiniTabBarDivol/build/Debug-iphonesimulator/InfiniTabBar.app/InfiniTabBar -o /Users/divol/Documents/Sources/InfiniTabBarDivol/build/Debug-iphonesimulator/InfiniTabBar.app.dSYM0#
+
+CLd /Users/divol/Documents/Sources/InfiniTabBar/build/Debug-iphonesimulator/InfiniTabBar.app/InfiniTabBar normal i386
+r0
 
 CLd /Users/divol/Documents/Sources/InfiniTabBarDivol/build/Debug-iphonesimulator/InfiniTabBar.app/InfiniTabBar normal i386
 s337619315.346727
@@ -237,6 +487,9 @@ xnormal
 xi386
 lSLF07#2@111"Link /Users/divol/Documents/Sources/InfiniTabBarDivol/build/Debug-iphonesimulator/InfiniTabBar.app/InfiniTabBar337619315#337619315#0(0"0(0#0#0"8622538848#1034"    cd /Users/divol/Documents/Sources/InfiniTabBarDivol    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer4.0/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer4.0/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/git/bin"    /Developer4.0/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer4.0/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -L/Users/divol/Documents/Sources/InfiniTabBarDivol/build/Debug-iphonesimulator -F/Users/divol/Documents/Sources/InfiniTabBarDivol/build/Debug-iphonesimulator -filelist /Users/divol/Documents/Sources/InfiniTabBarDivol/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/Objects-normal/i386/InfiniTabBar.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/divol/Documents/Sources/InfiniTabBarDivol/build/Debug-iphonesimulator/InfiniTabBar.app/InfiniTabBar0#
 
+CProcessInfoPlistFile /Users/divol/Documents/Sources/InfiniTabBar/build/Debug-iphonesimulator/InfiniTabBar.app/Info.plist InfiniTabBar-Info.plist
+r0
+
 CProcessInfoPlistFile /Users/divol/Documents/Sources/InfiniTabBarDivol/build/Debug-iphonesimulator/InfiniTabBar.app/Info.plist InfiniTabBar-Info.plist
 s337618717.511487
 e337618717.514494
@@ -245,6 +498,9 @@ xProcessInfoPlistFile
 x/Users/divol/Documents/Sources/InfiniTabBarDivol/build/Debug-iphonesimulator/InfiniTabBar.app/Info.plist
 xInfiniTabBar-Info.plist
 lSLF07#2@31"Process InfiniTabBar-Info.plist337618717#337618717#0(0"0(0#0#72"/Users/divol/Documents/Sources/InfiniTabBarDivol/InfiniTabBar-Info.plist18577769376055380#577"    cd /Users/divol/Documents/Sources/InfiniTabBarDivol    setenv PATH "/Developer4.0/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer4.0/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/git/bin"    builtin-infoPlistUtility InfiniTabBar-Info.plist -genpkginfo /Users/divol/Documents/Sources/InfiniTabBarDivol/build/Debug-iphonesimulator/InfiniTabBar.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/divol/Documents/Sources/InfiniTabBarDivol/build/Debug-iphonesimulator/InfiniTabBar.app/Info.plist0#
+
+CProcessPCH /var/folders/zh/zhU0v3DIH8CblzfcMQ5Z3++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/InfiniTabBar_Prefix-drjcshwmfkalmjaodxqqcftovlni/InfiniTabBar_Prefix.pch.gch InfiniTabBar_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+r0
 
 CProcessPCH /var/folders/zh/zhU0v3DIH8CblzfcMQ5Z3++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/InfiniTabBar_Prefix-fbxmxofbqakaixaeywkoxkkbgcrs/InfiniTabBar_Prefix.pch.gch InfiniTabBar_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
 s337618718.791212
@@ -258,6 +514,9 @@ xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@34"Precompile InfiniTabBar_Prefix.pch337618718#337618721#0(0"0(0#0#72"/Users/divol/Documents/Sources/InfiniTabBarDivol/InfiniTabBar_Prefix.pch8623672256#2060"    cd /Users/divol/Documents/Sources/InfiniTabBarDivol    setenv LANG en_US.US-ASCII    setenv PATH "/Developer4.0/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer4.0/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/git/bin"    /Developer4.0/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer4.0/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/divol/Documents/Sources/InfiniTabBarDivol/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/InfiniTabBar-generated-files.hmap -I/Users/divol/Documents/Sources/InfiniTabBarDivol/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/InfiniTabBar-own-target-headers.hmap -I/Users/divol/Documents/Sources/InfiniTabBarDivol/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/InfiniTabBar-all-target-headers.hmap -iquote /Users/divol/Documents/Sources/InfiniTabBarDivol/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/InfiniTabBar-project-headers.hmap -F/Users/divol/Documents/Sources/InfiniTabBarDivol/build/Debug-iphonesimulator -I/Users/divol/Documents/Sources/InfiniTabBarDivol/build/Debug-iphonesimulator/include -I/Users/divol/Documents/Sources/InfiniTabBarDivol/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/DerivedSources/i386 -I/Users/divol/Documents/Sources/InfiniTabBarDivol/build/InfiniTabBar.build/Debug-iphonesimulator/InfiniTabBar.build/DerivedSources -c /Users/divol/Documents/Sources/InfiniTabBarDivol/InfiniTabBar_Prefix.pch -o /var/folders/zh/zhU0v3DIH8CblzfcMQ5Z3++++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/InfiniTabBar_Prefix-fbxmxofbqakaixaeywkoxkkbgcrs/InfiniTabBar_Prefix.pch.gch0#
+
+CTouch /Users/divol/Documents/Sources/InfiniTabBar/build/Debug-iphonesimulator/InfiniTabBar.app
+r0
 
 CTouch /Users/divol/Documents/Sources/InfiniTabBarDivol/build/Debug-iphonesimulator/InfiniTabBar.app
 s337619315.384833

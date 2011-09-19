@@ -5,6 +5,8 @@
 
 #import "ViewController.h"
 #import "UIViewControlerForTest.h"
+#import "UITableViewControllerForTest.h"
+
 @implementation ViewController
 
 
@@ -14,15 +16,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-    
-    UIViewControlerForTest *vctrl1 =[[UIViewControlerForTest alloc] initWithNibName:@"UIViewControlerForTest" bundle:nil];
-    [vctrl1 changeTexte:@"0"];
+    UIScreen *screen = [UIScreen mainScreen];
+	CGRect sbounds = screen.applicationFrame;
+
+    UITableViewControllerForTest *vctrl1 =[[UITableViewControllerForTest alloc] initWithNibName:@"UITableViewControllerForTest" bundle:nil];
+    //[vctrl1 changeTexte:@"0"];
     
     //as a matter of fact an UIViewControler manage a lazy UITabBarItem, it can be used here !
     vctrl1.tabBarItem.image=nil;
     vctrl1.tabBarItem.title= @"Favorites";
     vctrl1.tabBarItem.tag= 0;
 
+     vctrl1.view.frame = CGRectMake(0, 0, sbounds.size.width, sbounds.size.height- 49.0);
+    
+    UIScrollView *usv =  (UIScrollView *)vctrl1.view;
+    
+    usv.contentSize = CGSizeMake(sbounds.size.width,sbounds.size.height- 49.0);
+    
     
     
 	// Items
@@ -84,7 +94,14 @@
     [vctrl5 changeTexte:@"4"];
     
      
-    [self addViewControllers:[NSArray arrayWithObjects:vctrl1,
+    UINavigationController * picsPL;
+    
+    picsPL = [[UINavigationController alloc] initWithRootViewController:vctrl1];
+     picsPL.view.frame = CGRectMake(0, 0, sbounds.size.width, sbounds.size.height- 49.0);
+    
+    picsPL.navigationBarHidden=YES;
+   // picsPL.toolbarHidden=YES;
+    [self addViewControllers:[NSArray arrayWithObjects:picsPL,
                               vctrl2,
                               vctrl3,
                               vctrl4,
@@ -129,7 +146,7 @@
 	self.tabBar.bounces = NO;
 	
 	
-	
+	[picsPL release];
    
 	}
 
@@ -171,7 +188,7 @@
     [super infiniTabBar:atabBar didSelectItemWithTag:tag];
     if (self.currentViewController){
         NSString *str =[NSString stringWithFormat:@"tag=%i",tag];
-        [self.currentViewController changeTexte:str];
+        //[self.currentViewController changeTexte:str];
     }
 }
 

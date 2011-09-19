@@ -50,7 +50,7 @@
 					20,
 					537,
 					20,
-					48.16259765625,
+					48,
 					43,
 					43,
 					20,
@@ -65,10 +65,11 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 337617397;
-			PBXWorkspaceStateSaveDate = 337617397;
+			PBXPerProjectTemplateStateSaveDate = 338110419;
+			PBXWorkspaceStateSaveDate = 338110419;
 		};
 		perUserProjectItems = {
+			E17DAC98142727D7000B1420 /* PBXTextBookmark */ = E17DAC98142727D7000B1420 /* PBXTextBookmark */;
 			E1FDEB44141FA9A2000CEB9C /* PBXTextBookmark */ = E1FDEB44141FA9A2000CEB9C /* PBXTextBookmark */;
 			E1FDEB45141FA9A2000CEB9C /* PBXTextBookmark */ = E1FDEB45141FA9A2000CEB9C /* PBXTextBookmark */;
 			E1FDEB46141FA9A2000CEB9C /* PBXTextBookmark */ = E1FDEB46141FA9A2000CEB9C /* PBXTextBookmark */;
@@ -76,7 +77,6 @@
 			E1FDEB49141FA9A2000CEB9C /* PBXTextBookmark */ = E1FDEB49141FA9A2000CEB9C /* PBXTextBookmark */;
 			E1FDEB4A141FA9A2000CEB9C /* PBXTextBookmark */ = E1FDEB4A141FA9A2000CEB9C /* PBXTextBookmark */;
 			E1FDEB4B141FA9A2000CEB9C /* PBXTextBookmark */ = E1FDEB4B141FA9A2000CEB9C /* PBXTextBookmark */;
-			E1FDEB4D141FA9A2000CEB9C /* XCBuildMessageTextBookmark */ = E1FDEB4D141FA9A2000CEB9C /* XCBuildMessageTextBookmark */;
 			E1FDEB4E141FA9A2000CEB9C /* PBXTextBookmark */ = E1FDEB4E141FA9A2000CEB9C /* PBXTextBookmark */;
 		};
 		sourceControlManager = E1FDEB30141FA214000CEB9C /* Source Control */;
@@ -92,10 +92,20 @@
 	};
 	362D005E13AA412800E6091E /* InfiniTabBar.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {824, 2132}}";
+			sepNavIntBoundsRect = "{{0, 0}, {715, 5135}}";
 			sepNavSelRange = "{622, 0}";
-			sepNavVisRange = "{3, 1351}";
+			sepNavVisRange = "{3, 1412}";
 		};
+	};
+	E17DAC98142727D7000B1420 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 362D005E13AA412800E6091E /* InfiniTabBar.m */;
+		name = "InfiniTabBar.m: 31";
+		rLen = 0;
+		rLoc = 622;
+		rType = 0;
+		vrLen = 1412;
+		vrLoc = 3;
 	};
 	E1FDEB2C141FA1F5000CEB9C /* InfiniTabBar */ = {
 		isa = PBXExecutable;
@@ -181,6 +191,7 @@
 	};
 	E1FDEB48141FA9A2000CEB9C /* UIView.h */ = {
 		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
 		name = UIView.h;
 		path = /Developer4.0/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIView.h;
 		sourceTree = "<absolute>";
@@ -217,18 +228,10 @@
 	};
 	E1FDEB4C141FA9A2000CEB9C /* UIScrollView.h */ = {
 		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
 		name = UIScrollView.h;
 		path = /Developer4.0/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIScrollView.h;
 		sourceTree = "<absolute>";
-	};
-	E1FDEB4D141FA9A2000CEB9C /* XCBuildMessageTextBookmark */ = {
-		isa = PBXTextBookmark;
-		comments = "Expected ']' before 'self'";
-		fRef = 362D005E13AA412800E6091E /* InfiniTabBar.m */;
-		fallbackIsa = XCBuildMessageTextBookmark;
-		rLen = 1;
-		rLoc = 24;
-		rType = 1;
 	};
 	E1FDEB4E141FA9A2000CEB9C /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;

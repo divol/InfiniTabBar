@@ -23,6 +23,8 @@
 		E142310414209763003664FE /* down_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = E142310014209763003664FE /* down_arrow.png */; };
 		E1979FB91420E46B0044D062 /* tab-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = E1979FB71420E46B0044D062 /* tab-arrow.png */; };
 		E1979FBA1420E46B0044D062 /* tab-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1979FB81420E46B0044D062 /* tab-arrow@2x.png */; };
+		E1A73DAB1427340800D884B4 /* UITableViewControllerForTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A73DA91427340800D884B4 /* UITableViewControllerForTest.m */; };
+		E1A73DAC1427340800D884B4 /* UITableViewControllerForTest.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1A73DAA1427340800D884B4 /* UITableViewControllerForTest.xib */; };
 		E1BD53561421FFDF000BE0B4 /* InfiniTabBarControler.m in Sources */ = {isa = PBXBuildFile; fileRef = E1BD53551421FFDF000BE0B4 /* InfiniTabBarControler.m */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +52,9 @@
 		E142310014209763003664FE /* down_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down_arrow.png; sourceTree = "<group>"; };
 		E1979FB71420E46B0044D062 /* tab-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab-arrow.png"; sourceTree = "<group>"; };
 		E1979FB81420E46B0044D062 /* tab-arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab-arrow@2x.png"; sourceTree = "<group>"; };
+		E1A73DA81427340800D884B4 /* UITableViewControllerForTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewControllerForTest.h; sourceTree = "<group>"; };
+		E1A73DA91427340800D884B4 /* UITableViewControllerForTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewControllerForTest.m; sourceTree = "<group>"; };
+		E1A73DAA1427340800D884B4 /* UITableViewControllerForTest.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UITableViewControllerForTest.xib; sourceTree = "<group>"; };
 		E1BD53541421FFDF000BE0B4 /* InfiniTabBarControler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfiniTabBarControler.h; sourceTree = "<group>"; };
 		E1BD53551421FFDF000BE0B4 /* InfiniTabBarControler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfiniTabBarControler.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +87,9 @@
 				E10684291423389300F4469F /* UIViewControlerForTest.h */,
 				E106842A1423389300F4469F /* UIViewControlerForTest.m */,
 				E106842B1423389300F4469F /* UIViewControlerForTest.xib */,
+				E1A73DA81427340800D884B4 /* UITableViewControllerForTest.h */,
+				E1A73DA91427340800D884B4 /* UITableViewControllerForTest.m */,
+				E1A73DAA1427340800D884B4 /* UITableViewControllerForTest.xib */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -197,6 +205,7 @@
 				E1979FB91420E46B0044D062 /* tab-arrow.png in Resources */,
 				E1979FBA1420E46B0044D062 /* tab-arrow@2x.png in Resources */,
 				E106842D1423389300F4469F /* UIViewControlerForTest.xib in Resources */,
+				E1A73DAC1427340800D884B4 /* UITableViewControllerForTest.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,6 +222,7 @@
 				362D005F13AA412800E6091E /* InfiniTabBar.m in Sources */,
 				E1BD53561421FFDF000BE0B4 /* InfiniTabBarControler.m in Sources */,
 				E106842C1423389300F4469F /* UIViewControlerForTest.m in Sources */,
+				E1A73DAB1427340800D884B4 /* UITableViewControllerForTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
