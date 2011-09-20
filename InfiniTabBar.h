@@ -33,10 +33,11 @@
 - (int)selectedItemTag;
 - (BOOL)scrollToTabBarWithTag:(int)tag animated:(BOOL)animated;
 - (BOOL)selectItemWithTag:(int)tag;
-
+- (void)positionArrowAnimated:(BOOL)animated;
 @end
 
 @protocol InfiniTabBarDelegate <NSObject>
 - (void)infiniTabBar:(InfiniTabBar *)tabBar didScrollToTabBarWithTag:(int)tag;
+- (BOOL)infiniTabBar:(InfiniTabBar *)tabBar willSelectItemWithTag:(int)tag;
 - (void)infiniTabBar:(InfiniTabBar *)tabBar didSelectItemWithTag:(int)tag;
 @end

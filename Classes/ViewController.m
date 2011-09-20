@@ -97,11 +97,11 @@
     UINavigationController * picsPL;
     
     picsPL = [[UINavigationController alloc] initWithRootViewController:vctrl1];
-     picsPL.view.frame = CGRectMake(0, 0, sbounds.size.width, sbounds.size.height- 49.0);
+     //picsPL.view.frame = CGRectMake(0, 0, sbounds.size.width, sbounds.size.height- 49.0);
     
     picsPL.navigationBarHidden=YES;
    // picsPL.toolbarHidden=YES;
-    [self addViewControllers:[NSArray arrayWithObjects:picsPL,
+    [self setViewControllers:[NSArray arrayWithObjects:picsPL,
                               vctrl2,
                               vctrl3,
                               vctrl4,
@@ -186,7 +186,7 @@
  
 - (void)infiniTabBar:(InfiniTabBar *)atabBar didSelectItemWithTag:(int)tag {
     [super infiniTabBar:atabBar didSelectItemWithTag:tag];
-    if (self.currentViewController){
+    if (self.selectedViewController){
         NSString *str =[NSString stringWithFormat:@"tag=%i",tag];
         //[self.currentViewController changeTexte:str];
     }

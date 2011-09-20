@@ -372,13 +372,18 @@
 }
 
 - (void)tabBar:(UITabBar *)cTabBar didSelectItem:(UITabBarItem *)item {
-	// Act like a single tab bar
-	for (UITabBar *tabBar in self.tabBars)
-		if (tabBar != cTabBar)
-			tabBar.selectedItem = nil;
-	
-	[infiniTabBarDelegate infiniTabBar:self didSelectItemWithTag:item.tag];
-    [self positionArrowAnimated:YES];	
+    if ([infiniTabBarDelegate infiniTabBar:self willSelectItemWithTag:item.tag]){
+        // Act like a single tab bar
+        for (UITabBar *tabBar in self.tabBars)
+            if (tabBar != cTabBar)
+                tabBar.selectedItem = nil;
+        
+        [infiniTabBarDelegate infiniTabBar:self didSelectItemWithTag:item.tag];
+        [self positionArrowAnimated:YES];	
+    }else{
+        for (UITabBar *tabBar in self.tabBars)
+            tabBar.selectedItem = nil;
+    }
     
 }
 

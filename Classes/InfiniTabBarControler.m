@@ -12,13 +12,17 @@
 @implementation InfiniTabBarControler
 @synthesize tabBar;
 @synthesize viewControllers;
-@synthesize currentViewController;
+@synthesize selectedViewController;
 @synthesize delegate;
+@synthesize customizableViewControllers;
+@synthesize moreNavigationController;
+@synthesize selectedIndex;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.tabBar = [[InfiniTabBar alloc] initWithFrame:self.view.frame];
     }
     return self;
 }
@@ -28,7 +32,7 @@
     
     self.tabBar=nil;
     self.viewControllers=nil;
-    self.currentViewController=nil;
+    self.selectedViewController=nil;
     [super dealloc];
 }
 
@@ -54,7 +58,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.tabBar = [[InfiniTabBar alloc] initWithFrame:self.view.frame];
+    if (!self.tabBar)
+     self.tabBar = [[InfiniTabBar alloc] initWithFrame:self.view.frame];
     // Don't show scroll indicator
 	self.tabBar.showsHorizontalScrollIndicator = NO;
 	self.tabBar.infiniTabBarDelegate = self;
@@ -66,9 +71,9 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    if (self.currentViewController){
-        [self.currentViewController.view removeFromSuperview]; 
-        self.currentViewController=nil;
+    if (self.selectedViewController){
+        [self.selectedViewController.view removeFromSuperview]; 
+        self.selectedViewController=nil;
     }
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -82,23 +87,29 @@
 
 
 // need to mimik some UITabBarControler features
-- (void)addViewControllers:(NSArray *)aviewControllers animated:(BOOL)animated{
-    
-    if (self.tabBar.tabBars.count ==0){
-        //no tabbaritem added, but UIViewControler have lazy one !!
-        
-        NSMutableArray *marray = [[[NSMutableArray alloc] init] autorelease];
-        for ( UIViewController *ctrl in aviewControllers){
-            [marray addObject:ctrl.tabBarItem];
+- (void)setViewControllers:(NSArray *)aviewControllers animated:(BOOL)animated{
+    UIScreen *screen = [UIScreen mainScreen];
+	CGRect sbounds = screen.applicationFrame;
+    unsigned int compteur=0;
+    NSMutableArray *marray = [[[NSMutableArray alloc] init] autorelease];
+    for ( UIViewController *ctrl in aviewControllers){
+        ctrl.view.frame = CGRectMake(0, 0, sbounds.size.width, sbounds.size.height- 49.0); // leave place to tabbar
+        if (self.tabBar.tabBars.count ==0){
+             ctrl.tabBarItem.tag=compteur;
+             [marray addObject:ctrl.tabBarItem];
+             compteur++;
         }
-        
-        [self.tabBar setItems:[NSArray arrayWithArray:marray] animated:YES];
-        
     }
-    self.viewControllers=[NSMutableArray arrayWithArray:aviewControllers]; // add the view controlers
-    self.currentViewController = [self.viewControllers objectAtIndex:0];
-    [self.view addSubview:self.currentViewController.view];
-    [self.view bringSubviewToFront:self.currentViewController.view]; 
+     if (self.tabBar.tabBars.count ==0){
+         [self.tabBar setItems:[NSArray arrayWithArray:marray] animated:YES];
+     }
+    
+        self.viewControllers=[NSMutableArray arrayWithArray:aviewControllers]; // add the view controlers
+    self.selectedViewController = [self.viewControllers objectAtIndex:0];
+    [self.tabBar positionArrowAnimated:YES];
+    [self.view addSubview:self.selectedViewController.view];
+    [self.view bringSubviewToFront:self.selectedViewController.view]; 
+    [self.view bringSubviewToFront:self.tabBar]; 
 }
 
 #pragma mark delegate
@@ -106,22 +117,35 @@
     //nop
 }
 
+- (BOOL)infiniTabBar:(InfiniTabBar *)tabBar willSelectItemWithTag:(int)tag {
+    //nop
+    return (!self.selectedViewController.modalViewController);
+}
+
 - (void)infiniTabBar:(InfiniTabBar *)tabBar didSelectItemWithTag:(int)tag {
     if (self.viewControllers){
-        if (self.currentViewController){
-            [self.currentViewController.view removeFromSuperview]; 
-            self.currentViewController=nil;
+        if (self.selectedViewController){
+            
+            if (self.selectedViewController.modalViewController){
+                [self.tabBar positionArrowAnimated:YES];
+                return;
+            }
+            
+            [self.selectedViewController.view removeFromSuperview]; 
+            self.selectedViewController=nil;
             
         }
         if (tag < self.viewControllers.count){
            
-            self.currentViewController = [self.viewControllers objectAtIndex:tag];
+            self.selectedViewController = [self.viewControllers objectAtIndex:tag];
             
-           [self.view addSubview:self.currentViewController.view];
-            [self.view bringSubviewToFront:self.currentViewController.view]; 
+           [self.view addSubview:self.selectedViewController.view];
+            [self.view bringSubviewToFront:self.selectedViewController.view]; 
         }
     }
+    self.selectedIndex  = tag;
       //nop
+    [self.view bringSubviewToFront:self.tabBar];
 }
 
 
