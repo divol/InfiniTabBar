@@ -41,7 +41,7 @@
             CGContextAddLineToPoint(ctx,size.width,size.height/2.0);
             CGContextAddLineToPoint(ctx,0.0,0.0);
             CGContextClosePath(ctx);
-
+            
             break;
         case 4:
             //up
@@ -59,7 +59,7 @@
             CGContextAddLineToPoint(ctx,size.width,size.height);
             CGContextAddLineToPoint(ctx,size.width,0.0);
             CGContextClosePath(ctx);
-
+            
             break;
             
     }
@@ -74,9 +74,9 @@
 	UIGraphicsEndImageContext();
     
     return result;
-
     
-
+    
+    
 }
 - (void)didMoveToSuperview{
     [super didMoveToSuperview];
@@ -144,7 +144,7 @@
         }
         
     }
-
+    
 }
 
 
@@ -166,7 +166,7 @@
 		
 		float x = 0.0;
 		
-				
+        
 		self.contentSize = CGSizeMake(x, 49.0);
         
         
@@ -191,10 +191,10 @@
 	
     if (self) {
 		[self setItems:items animated:NO];
-                
-
+        
+        
 	}
-	 
+    
     return self;
 }
 
@@ -219,15 +219,15 @@
         
         UIScreen *screen = [UIScreen mainScreen];
         CGRect sbounds = screen.applicationFrame;
-
+        
         int nbitems = tb.items.count;
         
         float pos = (tag % 5) * ((sbounds.size.width/nbitems));
         
         f.origin.x = pos + (((sbounds.size.width/nbitems) / 2) - (f.size.width / 2));
         f.origin.y= sbounds.size.height- 55;  
-         
-         self.arrow.frame = f;
+        
+        self.arrow.frame = f;
         if (animated) {
             [UIView commitAnimations];
         }
@@ -261,8 +261,8 @@
 
 - (void)setItems:(NSArray *)items animated:(BOOL)animated {
     
-     if (self.tabBars.count !=0){
-         
+    if (self.tabBars.count !=0){
+        
         for (UITabBar *tabBar in self.tabBars) {
             
             int len = 0;
@@ -275,39 +275,39 @@
         
         self.contentSize = CGSizeMake(ceil(items.count / 5.0) * self.frame.size.width, 49.0);
         
-       
-     }else{
-         UIScreen *screen = [UIScreen mainScreen];
-         CGRect sbounds = screen.applicationFrame;
-         
-         float x = 0.0;
-         
-         for (double d = 0; d < ceil(items.count / 5.0); d ++) {
-             UITabBar *tabBar = [[UITabBar alloc] initWithFrame:CGRectMake(x, 0.0, sbounds.size.width, 49.0)];
-             tabBar.delegate = self;
-             
-             int len = 0;
-             
-             for (int i = d * 5; i < d * 5 + 5; i ++)
-                 if (i < items.count)
-                     len ++;
-             
-             tabBar.items = [items objectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(d * 5, len)]];
-             
-             [self addSubview:tabBar];
-             
-             [self.tabBars addObject:tabBar];
-             
-             [tabBar release];
-             
-             x += self.frame.size.width;
-         }
-         
-         self.contentSize = CGSizeMake(x, 49.0);
-         
-     }
-     [self positionArrowAnimated:animated];
-     [self arrowDecoration];
+        
+    }else{
+        UIScreen *screen = [UIScreen mainScreen];
+        CGRect sbounds = screen.applicationFrame;
+        
+        float x = 0.0;
+        
+        for (double d = 0; d < ceil(items.count / 5.0); d ++) {
+            UITabBar *tabBar = [[UITabBar alloc] initWithFrame:CGRectMake(x, 0.0, sbounds.size.width, 49.0)];
+            tabBar.delegate = self;
+            
+            int len = 0;
+            
+            for (int i = d * 5; i < d * 5 + 5; i ++)
+                if (i < items.count)
+                    len ++;
+            
+            tabBar.items = [items objectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(d * 5, len)]];
+            
+            [self addSubview:tabBar];
+            
+            [self.tabBars addObject:tabBar];
+            
+            [tabBar release];
+            
+            x += self.frame.size.width;
+        }
+        
+        self.contentSize = CGSizeMake(x, 49.0);
+        
+    }
+    [self positionArrowAnimated:animated];
+    [self arrowDecoration];
 }
 
 - (int)currentTabBarTag {
@@ -356,7 +356,7 @@
 
 - (void)layoutSubviews {
 	[super layoutSubviews];
-		
+    
 	[self positionArrowAnimated:NO];
 }
 
@@ -372,6 +372,7 @@
 }
 
 - (void)tabBar:(UITabBar *)cTabBar didSelectItem:(UITabBarItem *)item {
+    
     if ([infiniTabBarDelegate infiniTabBar:self willSelectItemWithTag:item.tag]){
         // Act like a single tab bar
         for (UITabBar *tabBar in self.tabBars)
@@ -395,8 +396,8 @@
         [imageviewleft release];
     if (imageviewright)
         [imageviewright release];
-
-
+    
+    
 	[super dealloc];
 }
 
